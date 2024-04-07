@@ -5,6 +5,15 @@
     left: 0;
     box-shadow: 0 0 2rem #0000001a;
     background-color: white;
+    z-index: 1000;
+}
+
+.Hamburger {
+    background: none;
+    border: none;
+    outline: none;
+    display: none !important;
+    margin-right: 1rem;
 }
 
 .Navbar {
@@ -20,6 +29,7 @@
 .NavLinks {
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 2rem;
 }
 
@@ -28,9 +38,14 @@
     color: #7D7D7D;
     font-weight: 400;
     font-size: 0.9rem;
+    transition: all 0.5s;
 }
 
-.DonateButton {
+.NavLinks a:hover {
+    color: var(--yellow);
+}
+
+.DonateButton1, .DonateButton2 {
     background: var(--yellow);
     padding: 0.5rem 0.8rem;
     color: white;
@@ -40,4 +55,91 @@
     font-size: 0.8rem;
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.DonateButton1 { display: none; }
+
+@keyframes ham-menu1 {
+    0% {
+        line-height: 16px;
+        transform: scaleY(1);
+    }
+    50% {
+        line-height: 1px;
+        transform: scaleY(1);
+    }
+    50.1% {
+        line-height: 16px;
+        transform: scaleY(0.2);
+    }
+    100% {
+        line-height: 16px;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes ham-menu2 {
+    0% {
+        line-height: 16px;
+        transform: scaleY(1);
+    }
+    50% {
+        line-height: 16px;
+        transform: scaleY(0.2);
+    }
+    50.1% {
+        line-height: 1px;
+        transform: scaleY(1);
+    }
+    100% {
+        line-height: 16px;
+        transform: scaleY(1);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .Hamburger {
+        animation: ham-menu1 0.4s ease-in-out;
+        display: inline-block !important;
+    }
+    .Hamburger:focus {
+        animation: ham-menu2 0.4s ease-in-out;
+        pointer-events: none;
+    }
+
+    .NavLinks {
+        row-gap: 1rem;
+        padding: 0;
+        width: 100%;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    .NavLinks a { opacity: 0; }
+
+    .Hamburger:focus ~ .NavLinks {
+        max-height: 100vh;
+        padding: 2rem 0;
+        box-shadow: 0 1rem 1rem #0000001a;
+    }
+
+    .Hamburger:focus ~ .NavLinks a { opacity: 1; }
+}
+
+@media only screen and (max-width: 600px) {
+    .NavLinks {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .Navbar { justify-content: flex-start; }
+    .DonateButton1 { display: block; }
+    .DonateButton2 { display: none; }
 }

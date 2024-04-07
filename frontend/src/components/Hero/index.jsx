@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className={styles.Hero}>
         <div className={styles.Featured}>
-            <span>Featured</span>
+            <span className={styles.FeaturedTitle}>Featured <b>Blog</b></span>
             <Carousel/>
         </div>
         <Popular/>
