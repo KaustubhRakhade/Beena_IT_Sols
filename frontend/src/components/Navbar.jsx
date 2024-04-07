@@ -1,5 +1,6 @@
 import styles from '../styles/Navbar.module.css'
 import logo from '../assets/logo.png'
+
 export default function Navbar() {
   return (
     <div className={styles.NavbarContainer}>

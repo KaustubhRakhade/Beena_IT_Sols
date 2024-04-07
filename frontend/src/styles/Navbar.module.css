@@ -3,7 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    box-shadow: 0 0 2rem #dddd;
+    box-shadow: 0 0 2rem #0000001a;
+    background-color: white;
 }
 
 .Navbar {
