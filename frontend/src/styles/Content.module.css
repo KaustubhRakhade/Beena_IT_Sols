@@ -1,0 +1,7 @@
+.Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 82rem;
+    margin: 0 auto;
+}

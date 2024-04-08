@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
+import Content from './components/Content'
 import Hero from './components/Hero'
+import Footer from './components/Footer'
 
 // Note: using links instead of routing,
 // because no there arent any other pages to route to
@@ -12,6 +13,8 @@ function App() {
     <>
       <Navbar/>
       <Hero/>
+      <Content/>
+      <Footer/>
     </>
   )
 }
