@@ -12,6 +12,7 @@ export default function BlogSelect() {
   } = useContext(BlogContext);
 
   useEffect(() => {
+    if (selectedTags.length === 0) return;
     const blogs = document.getElementById('blogs');
     blogs.scrollIntoView({behavior: 'smooth'})
   }
