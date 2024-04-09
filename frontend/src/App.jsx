@@ -4,7 +4,8 @@ import Navbar from './components/Navbar'
 import Content from './components/Content'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
-import { createContext } from 'react'
+import { createContext, useEffect } from 'react'
+import { getBlogs } from "./API"
 
 // Note: using links instead of routing,
 // because no there arent any other pages to route to
@@ -29,6 +30,26 @@ function App() {
     currentPage, setCurrentPage,
     totalPages, setTotalPages
   }
+
+  // Gets blogs from API
+  useEffect(() => {
+    const temp = getBlogs();
+
+    // Get all tags
+    const tempTags = []
+    temp.forEach(blog => {
+      blog.tags.forEach(tag => {
+        if (!tempTags.includes(tag)) {
+          tempTags.push(tag)
+        }
+      })
+    })
+
+    // update state
+    setBlogData(temp)
+    setTagList(tempTags)
+    setTotalPages(1 + Math.floor((temp.length-1) / 6))
+  }, []);
 
   return (
     <BlogContext.Provider value={_blogContextVal}>

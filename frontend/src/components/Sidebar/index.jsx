@@ -10,7 +10,13 @@ export default function Sidebar() {
   return (
     <div className={styles.Sidebar}>
         <Archive />
-        {/* <TagSelect/> */}
+        <div className={styles.sidebarTags}>
+          <span>Search with Tags</span>
+          <TagSelect/>
+        </div>
+        <Categories />
+        <VisitorStats />
+        <Socials />
     </div>
   )
 }

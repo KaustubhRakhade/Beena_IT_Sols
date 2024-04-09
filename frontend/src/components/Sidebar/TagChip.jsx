@@ -1,25 +1,28 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import styles from './Sidebar.module.css'
+import { BlogContext } from '../../App';
 
-export default function TagChip({tag, setTagList, tagList}) {
+export default function TagChip({tag}) {
 
-    const [active, setActive] = useState(false)
+    const {
+        selectedTags, setSelectedTags,
+        setCurrentPage
+    } = useContext(BlogContext);
 
     const handleClick = () => {
-        if (tagList.includes(tag)) {
-            setTagList(tagList.filter((item) => item !== tag))
+        setCurrentPage(1)
+        if (selectedTags.includes(tag)) {
+            setSelectedTags(selectedTags.filter((item) => item !== tag))
         } else {
-            setTagList([...tagList, tag])
+            setSelectedTags([...selectedTags, tag])
         }
     }
 
-    useEffect(() => {
-        setActive(tagList.includes(tag))
-    }, [tagList]);
-
 
   return (
-    <div className={`${styles.TagChip} ${active ? styles.activeChip : null}`} onClick={handleClick}>
+    <div
+        className={`${styles.TagChip} ${selectedTags.includes(tag) ? styles.activeChip : null}`}
+        onClick={handleClick}>
         {tag}
     </div>
   )

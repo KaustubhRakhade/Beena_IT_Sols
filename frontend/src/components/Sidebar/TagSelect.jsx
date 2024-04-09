@@ -1,7 +1,14 @@
 import styles from './Sidebar.module.css'
 import TagChip from './TagChip'
+import { BlogContext } from '../../App';
+import { useContext } from 'react';
 
-export default function TagSelect({tagList, setTagList}) {
+export default function TagSelect() {
+
+  const {
+    tagList, setTagList
+  } = useContext(BlogContext);
+
   return (
     <div className={styles.TagSelect}>
       {

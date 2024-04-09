@@ -1,26 +1,25 @@
 import Pagination from './Pagination'
 import BlogList from './BlogList'
-import { getBlogs } from "../../API"
-import { useState, useEffect, useContext } from 'react'
 import styles from './BlogSelect.module.css';
+import { useEffect } from 'react';
+import { useContext } from 'react';
 import { BlogContext } from '../../App';
 
 export default function BlogSelect() {
 
   const {
-    blogData, setBlogData,
-    totalPages, setTotalPages,
-    currentPage, setCurrentPage
+    selectedTags
   } = useContext(BlogContext);
 
   useEffect(() => {
-    const temp = getBlogs();
-    setBlogData(temp)
-    setTotalPages(1 + Math.floor((temp.length-1) / 6))
-  }, []);
+    const blogs = document.getElementById('blogs');
+    blogs.scrollIntoView({behavior: 'smooth'})
+  }
+  , [selectedTags])
 
   return (
     <div className={styles.BlogSelect}>
+        <div id="blogs" className={styles.scrollTargetBlogs}></div>
         <BlogList/>
         <Pagination/>
     </div>

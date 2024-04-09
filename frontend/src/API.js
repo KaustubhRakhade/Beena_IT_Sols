@@ -34,7 +34,7 @@ const mockData = [
     {
         "title": "Importance of Regular Health Checkups",
         "author": "John Doe",
-        "tags": ["Health Checkups", "Health"],
+        "tags": ["Lifestyle", "Health"],
         "publishedDate": "22 Nov, 2021",
         "preview": "Understand the importance of regular health checkups and how they can help in early detection.",
         "coverImage": "health-checkups.png"
@@ -74,7 +74,7 @@ const mockData = [
     {
         "title": "Healthy Habits for a Healthier You",
         "author": "Jane Doe",
-        "tags": ["Habits", "Health"],
+        "tags": ["Lifestyle", "Health"],
         "publishedDate": "25 Jun, 2021",
         "preview": "Get healthy habits for a healthier you and how to incorporate them into your daily routine.",
         "coverImage": "healthy-habits.png"
@@ -122,7 +122,7 @@ const mockData = [
     {
         "title": "Benefits of Meditation for Health",
         "author": "Jane Doe",
-        "tags": ["Meditation", "Health"],
+        "tags": ["Mental Health", "Health"],
         "publishedDate": "10 Dec, 2020",
         "preview": "Learn about the benefits of meditation and how it can help you relax and reduce stress.",
         "coverImage": "meditation.png"
@@ -130,7 +130,7 @@ const mockData = [
     {
         "title": "Importance of Healthy Eating for Health",
         "author": "John Doe",
-        "tags": ["Eating", "Health"],
+        "tags": ["Diet", "Health"],
         "publishedDate": "22 Nov, 2020",
         "preview": "Know the importance of healthy eating and how it can help you stay fit and active.",
         "coverImage": "healthy-eating-2.png"
@@ -146,7 +146,7 @@ const mockData = [
     {
         "title": "Importance of Stress Management for Health",
         "author": "John Doe",
-        "tags": ["Stress Management", "Health"],
+        "tags": ["Mental Health", "Health"],
         "publishedDate": "18 Sept, 2020",
         "preview": "Understand the importance of stress management and how it can help you relax and stay calm.",
         "coverImage": "stress-management.png"
@@ -154,7 +154,7 @@ const mockData = [
     {
         "title": "Benefits of Yoga for Health and Well-being",
         "author": "Jane Doe",
-        "tags": ["Yoga", "Health"],
+        "tags": ["Exercise", "Health"],
         "publishedDate": "1 Aug, 2020",
         "preview": "Learn about the benefits of yoga and how it can help you stay healthy and fit.",
         "coverImage": "yoga.png"
@@ -170,7 +170,7 @@ const mockData = [
     {
         "title": "Healthy Habits for a Healthier Lifestyle",
         "author": "Jane Doe",
-        "tags": ["Habits", "Health"],
+        "tags": ["Lifestyle", "Health"],
         "publishedDate": "25 Jun, 2020",
         "preview": "Get healthy habits for a healthier lifestyle and how to incorporate them into your daily routine.",
         "coverImage": "healthy-habits-2.png"
@@ -186,7 +186,7 @@ const mockData = [
     {
         "title": "Importance of Hydration for Health and Well-being",
         "author": "Jane Doe",
-        "tags": ["Hydration", "Health"],
+        "tags": ["Water", "Health"],
         "publishedDate": "21 Apr, 2020",
         "preview": "Understand the importance of hydration and how it can help you stay hydrated and active.",
         "coverImage": "hydration.png"
@@ -194,7 +194,7 @@ const mockData = [
     {
         "title": "Benefits of Healthy Eating for a Healthy Lifestyle",
         "author": "John Doe",
-        "tags": ["Eating", "Health"],
+        "tags": ["Diet", "Health"],
         "publishedDate": "3 Mar, 2020",
         "preview": "Learn about the benefits of healthy eating and how it can help you stay fit and active.",
         "coverImage": "healthy-eating-3.png"

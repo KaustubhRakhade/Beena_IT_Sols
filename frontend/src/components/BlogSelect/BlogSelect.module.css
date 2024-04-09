@@ -1,3 +1,11 @@
+.scrollTargetBlogs {
+    height: 0;
+    width: 0;
+    background: transparent;
+    position: absolute;
+    margin-top: -5rem;
+}
+
 .BlogSelect {
     display: flex;
     flex-direction: column;
@@ -51,6 +59,12 @@
     border-radius: 0.2rem;
     font-weight: 500;
     color: var(--yellow);
+    cursor: pointer;
+}
+
+.BlogTags span.activeTag {
+    background: var(--yellow);
+    color: white;
 }
 
 .BlogTitle {
