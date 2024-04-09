@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { BlogContext } from '../../App';
 import styles from './BlogSelect.module.css';
 
 /*
@@ -21,7 +22,12 @@ Examples:
 
  */
 
-export default function Pagination({totalPages, currentPage, setCurrentPage}) {
+export default function Pagination() {
+
+    const {
+        totalPages,
+        currentPage, setCurrentPage
+    } = useContext(BlogContext);
 
     const [displayPages, setDisplayPages] = useState([])
 
@@ -73,7 +79,6 @@ export default function Pagination({totalPages, currentPage, setCurrentPage}) {
 
         setDisplayPages(newDisplayPages)
 
-        console.log(displayPages)
     }, [currentPage, totalPages])
 
     const notAllowedStyle = {

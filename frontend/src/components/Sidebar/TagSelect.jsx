@@ -1,7 +1,14 @@
-import React from 'react'
+import styles from './Sidebar.module.css'
+import TagChip from './TagChip'
 
-export default function TagSelect() {
+export default function TagSelect({tagList, setTagList}) {
   return (
-    <div>TagSelect</div>
+    <div className={styles.TagSelect}>
+      {
+        tagList.map((tag, index) => (
+          <TagChip key={index} tag={tag} tagList={tagList} setTagList={setTagList}/>
+        )
+      )}
+    </div>
   )
 }
